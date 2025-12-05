@@ -1,0 +1,10 @@
+
+@startuml
+User -> MainUI: load image
+MainUI -> ImageProcessor: load(path)
+User -> MainUI: change sliders
+MainUI -> ImageProcessor: apply brightness/contrast (preview)
+MainUI -> User: show preview
+User -> MainUI: save
+MainUI -> ImageProcessor: save(path)
+@enduml

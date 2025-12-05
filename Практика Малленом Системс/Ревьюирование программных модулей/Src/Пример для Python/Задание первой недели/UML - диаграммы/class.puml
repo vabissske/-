@@ -1,0 +1,22 @@
+
+@startuml
+class ImageProcessor {
+  - image
+  - prev_image
+  - path
+  + load(path)
+  + save(path, fmt=None)
+  + resize(w,h)
+  + brightness(factor)
+  + contrast(factor)
+  + info()
+  + undo()
+}
+class MainUI {
+  - processor: ImageProcessor
+  + load_image(path)
+  + update_preview()
+  + on_save()
+}
+MainUI --> ImageProcessor
+@enduml
